@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Birthday Scavenger Hunt</title>
+<style>
+  body {
+    background-color: #046307; /* Emerald green */
+    color: white;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    padding: 20px;
+    max-width: 700px;
+    margin: auto;
+  }
+  h1, h2 {
+    text-align: center;
+    color: #d9f0d9; /* lighter green */
+  }
+  .riddle {
+    background-color: #0b3d0b; /* dark emerald */
+    padding: 15px;
+    margin: 15px 0;
+    border-radius: 10px;
+    box-shadow: 0 0 10px #0b3d0b;
+  }
+  input[type="text"] {
+    padding: 10px;
+    width: 70%;
+    font-size: 16px;
+    border-radius: 5px;
+    border: none;
+    margin-right: 10px;
+  }
+  button {
+    background-color: #2ecc40; /* bright green */
+    color: #004d00;
+    font-weight: bold;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 16px;
+  }
+  button:hover {
+    background-color: #58d458;
+  }
+  #message {
+    margin-top: 15px;
+    font-size: 18px;
+    font-weight: bold;
+    min-height: 24px;
+  }
+</style>
+</head>
+<body>
+
+<h1>Happy 22nd Birthday Scavenger Hunt!</h1>
+<h2>Type the answer to get the next clue.</h2>
+
+<div id="riddle-container"></div>
+
+<div id="input-section" style="display:none;">
+  <input type="text" id="answer-input" placeholder="Type your answer here" autofocus />
+  <button onclick="checkAnswer()">Submit</button>
+  <div id="message"></div>
+</div>
+
+<script>
+  const riddles = [
+    {
+      clue: `23. *I don’t just drive — I glide with flair,*<br>
+      *A beast in purple, with curves so rare.*<br>
+      *On tracks I scream, in streets I flex,*<br>
+      *The dream machine that turns all necks.*<br>
+      *If midnight’s shade makes your heart race,*<br>
+      *Find the one who'd sell their soul for a taste.*`,
+      answer: "porsche 911 gt3 rs midnight purple"
+    },
+    {
+      clue: `2. *You measure my life in hours, I serve by being devoured. Thin I am quick, fat I am slow. The wind is my foe.*`,
+      answer: "candle"
+    },
+    {
+      clue: `3. *I once was a beast, an ant so feared,*<br>
+      *Now I serve my king, with voice that's weird.*<br>
+      *With claws so sharp and loyalty grand,*<br>
+      *I'd destroy whole armies at a*
